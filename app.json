@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Zyndicate_Galaxious",
+    "slug": "Zyndicate_Galaxious",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
