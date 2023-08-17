@@ -35,25 +35,31 @@ export default function MainContainer() {
               );
             },
             tabBarLabelStyle: { 
-              fontSize: 20,    // Adjust the font size here
-               // Use your desired font family
+              fontSize: 16,    // Adjust the font size here
+              
               marginBottom: 6, },
             tabBarActiveTintColor: '#0044A7',   // Active tab color
             tabBarInactiveTintColor: '#FFFFFF',    // Inactive tab color
           
             tabBarStyle: {                      // Bottom tab bar style
               backgroundColor: '#282635',       // Bottom tab bar color
+              height:80,
+
             },
+          
             headerStyle: {                      // Top bar style
-              backgroundColor: '#282635',       // Top bar color
+              backgroundColor: '#282635',      
+              height:110,
             },
-            headerTintColor: '#fff',            // Top bar text color
+            headerTintColor: '#fff',
+            headerTitleAlign: 'center',
           })}
         >
           <Tab.Screen name="Home" component={Home} />
           <Tab.Screen name="Map" component={Map} />
-          <Tab.Screen name="Profile" component={Profile} />
           <Tab.Screen name="Planner" component={Planner} />
+          <Tab.Screen name="Profile" component={Profile} />
+       
         </Tab.Navigator>
       </NavigationContainer>
     </PaperProvider>
