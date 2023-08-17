@@ -53,6 +53,14 @@ export default function MainContainer() {
             },
             headerTintColor: '#fff',
             headerTitleAlign: 'center',
+            headerRight: () => ( 
+              <MaterialCommunityIcons
+              name="bell"
+              size={23}
+              color="#fff"
+              style={{ marginRight: 30 }}
+            />
+          ),
           })}
         >
           <Tab.Screen name="Home" component={Home} />
