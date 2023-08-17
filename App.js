@@ -29,12 +29,25 @@ export default function MainContainer() {
               } else if (route.name === 'Planner') {
                 iconName = focused ? 'calendar' : 'calendar-outline';
               }
-
+              
               return (
                 <MaterialCommunityIcons name={iconName} size={size} color={color} />
               );
             },
-            tabBarLabelStyle: { marginBottom: 6 }, // Adjust label position
+            tabBarLabelStyle: { 
+              fontSize: 20,    // Adjust the font size here
+               // Use your desired font family
+              marginBottom: 6, },
+            tabBarActiveTintColor: '#0044A7',   // Active tab color
+            tabBarInactiveTintColor: '#FFFFFF',    // Inactive tab color
+          
+            tabBarStyle: {                      // Bottom tab bar style
+              backgroundColor: '#282635',       // Bottom tab bar color
+            },
+            headerStyle: {                      // Top bar style
+              backgroundColor: '#282635',       // Top bar color
+            },
+            headerTintColor: '#fff',            // Top bar text color
           })}
         >
           <Tab.Screen name="Home" component={Home} />

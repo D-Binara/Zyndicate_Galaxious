@@ -11,8 +11,10 @@ const Map = () => {
 
 const styles = StyleSheet.create({
   container: {
+  
     flex: 1,
-    backgroundColor: '#11',
+    backgroundColor: '#020011',
+
     alignItems: 'center',
     justifyContent: 'center',
   },
