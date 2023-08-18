@@ -11,13 +11,22 @@ const Home = () => {
  
   return (
     <View style={styles.container}>
-      <View style={styles.card}>
+      <View style={styles.card2}>
         <Text style={styles.tpcard}>Adventure Begins Here</Text>
         <TouchableOpacity style={styles.button} onPress={handleBookNow}>
           <Text style={styles.buttonText}>Book Now</Text>
         </TouchableOpacity>
       </View>
-      <Text style={styles.topic}>Popular Destination</Text>
+     
+       <Text style={styles.title}>Travelling Method</Text>
+       <View style={styles.rowContainer1}>
+       <TouchableOpacity style={styles.card1} >
+          <Text  style={styles.cardtext1} > The Capsule</Text>
+        </TouchableOpacity>
+       <TouchableOpacity style={styles.card1} >
+          <Text  style={styles.cardtext1} >SpaceBalloon</Text>
+        </TouchableOpacity>
+       </View>
     </View>
   );
 };
@@ -27,7 +36,61 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#020011',
   },
-  card: {
+  rowContainer:{
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
+  },
+  rowContainer1:{
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+    margin:25,
+  },
+  title1: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+    margin:25,
+    position:'relative'
+  },
+  card:{
+    height:140,
+    width:140,
+    backgroundColor:'#020011',
+    borderWidth:1,
+    borderColor:'#fff',
+    borderRadius: 10,
+   padding:7,
+   marginLeft:10,
+   marginBottom:7,
+   marginRight:10,
+    elevation: 3,
+  },
+  card1:{
+    height:140,
+    width:140,
+    backgroundColor:'#201F2E',
+    borderWidth:0.2,
+    borderColor:'#fff',
+    borderRadius: 10,
+    marginLeft:20,
+  },
+  cardtext:{
+    textAlign:'center',
+    color:'#fff',
+    justifyContent:'center',
+  },
+  cardtext1:{
+    textAlign:'center',
+    color:'#fff',
+    paddingTop:100,
+    justifyContent:'center',
+  },
+  card2: {
     backgroundColor: '#201F2E',
     borderRadius: 10,
     margin: 20,
