@@ -1,16 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image, } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
 
 const Home = () => {
   const navigation = useNavigation();
 
- 
   const handleBookNow = () => {
-    navigation.navigate('Booking'); // Make sure 'Booking' matches the screen name in your navigator
+    navigation.navigate('Booking'); // Navigate to the Booking screen
   };
-  
+ 
   return (
     <View style={styles.container}>
       <View style={styles.card}>
@@ -20,7 +18,6 @@ const Home = () => {
         </TouchableOpacity>
       </View>
       <Text style={styles.topic}>Popular Destination</Text>
-      
     </View>
   );
 };
@@ -55,12 +52,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 14,
   },
-  topic:{
+  topic: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 18,
-    marginLeft:25,
-  }
+    marginLeft: 25,
+  },
 });
 
 export default Home;
