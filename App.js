@@ -9,7 +9,8 @@ import Map from './screen/map';
 import Profile from './screen/profile';
 import Planner from './screen/planner';
 import { createStackNavigator } from '@react-navigation/stack';
-import Booking from './screen/Booking';
+import Booking from './screen/booking'; // Use lowercase "booking.js" here
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
