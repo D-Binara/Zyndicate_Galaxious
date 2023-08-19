@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-export default function home1() {
+export default function planpage() {
   return (
     <View>
-      <Text>home12</Text>
+      <Text>plan</Text>
     </View>
   )
 }

@@ -8,75 +8,127 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import signin from './screens/signin';
 import signup from './screens/signup';
 import exe from './screens/exe';
-import Maincontainer from './navigation/maincontainer';
-import app1 from './navigation/app1';
+import Maincontainer from './navigation/map';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Home1 from './navigation/home1';
+import Map1 from './navigation/map';
+import Planpage from './navigation/planpage';
+import Profile1 from './navigation/profile';
+import Payment from './navigation/payment';
+import setting from './navigation/setting';
+
 
 
 
 
 const Stack= createNativeStackNavigator();
 const BottomTab=createBottomTabNavigator();
+const Drawer=createDrawerNavigator();
+
+function Drawer1(){
+  return(
+    <Drawer.Navigator>
+    <Drawer.Screen name="profile" component={Profile} />
+      <Drawer.Screen name="setting" component={setting} />
+      <Drawer.Screen name="Payment" component={Payment} />
+    </Drawer.Navigator>
+  )
+}
+
+
+
 
 
 function Home(){
   return(
 
-    <View>
-      <Text>Home page</Text>
-    </View>
+    
+      <Home1/>
+    
   )
 }
 
 function Map(){
   return(
-    <View>
-      <Text>Mapping page</Text>
-    </View>
+    <Map1/>
     
   )
 }
 function Plan(){
   return(
-    <View>
-      <Text>Plane page</Text>
-    </View>
+    <Planpage/>
     
   )
 }
 function Profile(){
   return(
-    <View>
-      <Text>Profile page</Text>
-    </View>
+    <Profile1/>
     
   )
 }
 
 function Tab(){
   return(
-    <BottomTab.Navigator initialRouteName="Feed"
+    <BottomTab.Navigator initialRouteName="FEED"
       screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
+        tabBarActiveTintColor: 'rgba(0, 68, 167, 1)',
+         tabBarStyle: {
+      height: 80,
+      paddingHorizontal: 5,
+      paddingTop: 0,
+      backgroundColor: 'rgba(40, 38, 53, 1)',
+      position: 'absolute',
+      borderTopWidth: 0,
+      borderTopLeftRadius:50,
+      
+      borderTopRightRadius:50,
+      
+      
+      
+      
+  },headerTitleAlign:'center', headerStyle: {
+          backgroundColor: 'rgba(40, 38, 53, 1)',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
       }}>
       <BottomTab.Screen name='Home' component={Home}
         
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <Ionicons name="home" color={color} size={size} />
           ),
         }}
       />
-        <BottomTab.Screen name='Map' component={Map}/>
-        <BottomTab.Screen name='Plan' component={Plan}/>
-        <BottomTab.Screen name='Profile' component={Profile}
+        <BottomTab.Screen name='Map' component={Map}
+           options={{
+          tabBarLabel: 'Map',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="location" color={color} size={size} />
+          ),
+        }}
+        />
+        <BottomTab.Screen name='Plan' component={Plan}
+
+           options={{
+          tabBarLabel: 'Plan',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="book" color={color} size={size} />
+          ),
+        }}
+        />
+        <BottomTab.Screen name='Profile' component={Drawer1}
           
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="user" color={color} size={size} />
+            <Ionicons name="people" color={color} size={size} />
           ),
         }}
         />
@@ -89,8 +141,8 @@ function Tab(){
 
 export default function App() {
   return (
-   <NavigationContainer>
-    <Stack.Navigator screenOptions={{headerShown:false}}  >
+   <NavigationContainer >
+    <Stack.Navigator screenOptions={{headerShown:false}} >
     <Stack.Screen
 
       name="home"
@@ -128,13 +180,7 @@ export default function App() {
       options={{title:"Sign Up"}}
 
     />
-    <Stack.Screen
-
-      name="app1"
-      component={app1}
-      options={{title:"app1"}}
-
-    />
+    
     <Stack.Screen
 
       name="Tab"
