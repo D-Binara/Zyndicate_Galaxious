@@ -17,7 +17,7 @@ const Plane2 = ({})=> {
                         <Text style={styles.description1}>The moon is Earth's natural satellite and the only other celestial body that humans  have visited.
                          It has a barren   and rocky landscape with  numerous craters and.                            
                        </Text>
-                       <Text style={styles.description2}>
+                       <Text style={styles.}>
                        Start your day with a visit to the  SPACE station 
                        </Text>
                         <View style={styles.buttonex}>

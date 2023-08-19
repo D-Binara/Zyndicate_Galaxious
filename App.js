@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <NavigationContainer >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="S1" component={S1} />
@@ -14,10 +15,15 @@ export default function App() {
       </Stack.Navigator>
     </NavigationContainer>
 =======
+=======
+>>>>>>> parent of 8f0b01f (Upload again)
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
+<<<<<<< HEAD
+>>>>>>> parent of 8f0b01f (Upload again)
+=======
 >>>>>>> parent of 8f0b01f (Upload again)
   );
 }
