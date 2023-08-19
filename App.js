@@ -5,6 +5,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 603d0d8 (Update)
     <NavigationContainer >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="S1" component={S1} />
