@@ -1,16 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StyleSheet, Text, View } from 'react-native';
 
-import S1 from './Src/Screen/s1';
-import S2 from './Src/Screen/s2';
-import Plane2 from './Src/Screen/Plane2';
-
-const Stack = createNativeStackNavigator();
-
-function App() {
+export default function App() {
   return (
+<<<<<<< HEAD
     <NavigationContainer >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="S1" component={S1} />
@@ -19,7 +13,20 @@ function App() {
         
       </Stack.Navigator>
     </NavigationContainer>
+=======
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+>>>>>>> parent of 8f0b01f (Upload again)
   );
 }
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
