@@ -1,28 +1,23 @@
 import * as React from 'react';
 import { SafeAreaView, ScrollView ,StyleSheet,View,Text,Button, ImageBackground,Dimensions} from "react-native";
 
-
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
-
 
 const S2 = ({navigation})=> {
     return(
         <SafeAreaView style={{flex:1}} >
-            <ScrollView>
                      <View style ={styles.container}>
                         <ImageBackground source={require('../Images/S2BG.png')} resizeMode="cover" style={styles.image}>
                         <Text style={styles.myTitle}>Expore The {'\n'}Universe</Text>
-                        <Text style={styles.description}>The universe is all of space and time and their contents, including planets, stars, galaxies, and all other forms of matter and energy.</Text>
                         <View style={styles.buttonex}>
                         <Button 
-                               onPress={() => navigation.navigate('s1')}
+                               onPress={() => navigation.navigate('Plane2')}
                                title="Ex"
                             />
                         </View>
                         </ImageBackground>
                     </View> 
-            </ScrollView>
         </SafeAreaView>
     )
     }

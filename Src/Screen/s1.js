@@ -4,27 +4,25 @@ import { SafeAreaView, ScrollView ,StyleSheet,View,Text,Button, ImageBackground,
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
-
 const S1 = ({ navigation })=> {
-    return(
+    return (
         <SafeAreaView style={{flex:1}} >
-            <ScrollView>
-                     <View style ={styles.container}>
-                        <ImageBackground source={require('../Images/S1BG.png')} resizeMode="cover" style={styles.image}>
-                        <Text style={styles.myTitle}>Expore The {'\n'}Universe</Text>
-                        <Text style={styles.description}>The universe is all of space and time and their contents, including planets, stars, galaxies, and all other forms of matter and energy.</Text>
-                        <View style={styles.buttonex}>
-                            <Button 
-                                title="Explore"
-                                onPress={() => navigation.navigate('s2')}
-                            />
-                        </View>
-                        </ImageBackground>
-                    </View> 
-            </ScrollView>
-        </SafeAreaView>
-    )
-    }
+                 <View style ={styles.container}>
+                    <ImageBackground source={require('../Images/S1BG.png')} resizeMode="cover" style={styles.image}>
+                    <Text style={styles.myTitle}>Expore The {'\n'}Universe</Text>
+                    <Text style={styles.description}>The universe is all of space and time and their contents, including planets, stars, galaxies, and all other forms of matter and energy.</Text>
+                    <View style={styles.buttonex}>
+                        <Button 
+                            title="Explore"
+                            onPress={() => navigation.navigate('S2')}
+                        />
+                    </View>
+                    </ImageBackground>
+                </View> 
+    </SafeAreaView>
+    );
+  }
+
 const styles = StyleSheet.create ({
     buttonex:{
         paddingTop:75,
