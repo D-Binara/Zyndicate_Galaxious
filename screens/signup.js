@@ -11,7 +11,7 @@ export default function signup({navigation}) {
 
 
     
-     <Image source={require('./moon-sky-night-background-asset-game-2d-futuristic-generative-ai_191095-2086.jpg')}></Image>
+     <Image source={require('./images/moon-sky-night-background-asset-game-2d-futuristic-generative-ai_191095-2086.jpg')}></Image>
 
 
      <View style={styles.container1}>
@@ -56,9 +56,9 @@ export default function signup({navigation}) {
        
        <View style={styles.imgIcon}>
 
-      <Image style={styles.img3} source={require('./Facebook_f_logo_(2021).svg.png')}></Image>
-      <Image style={styles.img5} source={require('./Apple_logo_black.svg.png')}></Image>
-      <Image style={styles.img4} source={require('./google-logo-png-suite-everything-you-need-know-about-google-newest-0.png')}></Image>
+      <Image style={styles.img3} source={require('./images/Facebook_f_logo_(2021).svg.png')}></Image>
+      <Image style={styles.img5} source={require('./images/Apple_logo_black.svg.png')}></Image>
+      <Image style={styles.img4} source={require('./images/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png')}></Image>
         
        
        </View>

@@ -10,7 +10,7 @@ export default function signin({navigation}) {
 
 
     
-     <Image source={require('./space-universe-with-planets_896675-92.jpg')}></Image>
+     <Image source={require('./images/space-universe-with-planets_896675-92.jpg')}></Image>
 
 
      <View style={styles.container1}>
@@ -38,7 +38,7 @@ export default function signin({navigation}) {
 
        <View style={styles.inputBox3}>
 
-         <Pressable style={styles.gosignup} ><Text style={styles.gosignup1}>Don't you have an account
+         <Pressable style={styles.gosignup} onPress={()=>navigation.navigate("Tab")} ><Text style={styles.gosignup1}>Don't you have an account
         
          
          
@@ -52,9 +52,9 @@ export default function signin({navigation}) {
 
      <View style={styles.btns}>
 
-     <Pressable style={styles.btn1} ><Image style={styles.imgf} source={require('./Facebook_f_logo_(2021).svg.png')}></Image><Text style={styles.btn2}>Login with Facebook</Text></Pressable>
+     <Pressable style={styles.btn1} ><Image style={styles.imgf} source={require('./images/Facebook_f_logo_(2021).svg.png')}></Image><Text style={styles.btn2}>Login with Facebook</Text></Pressable>
      
-     <Pressable style={styles.btng1} ><Image style={styles.imgf} source={require('./google-logo-png-suite-everything-you-need-know-about-google-newest-0.png')}></Image><Text style={styles.btng}>Login with Google</Text></Pressable>
+     <Pressable style={styles.btng1} ><Image style={styles.imgf} source={require('./images/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png')}></Image><Text style={styles.btng}>Login with Google</Text></Pressable>
 
      </View>
 

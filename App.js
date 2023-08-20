@@ -1,14 +1,10 @@
 import { View, Text } from 'react-native';
 import React from 'react';
-import home from './screens/home';
-import third from './screens/third';
-import secondScreen from './screens/secondScreen';
+import home from './screens/explore';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import signin from './screens/signin';
-import signup from './screens/signup';
-import exe from './screens/exe';
-import Maincontainer from './navigation/map';
+import Signin from './screens/Signin';
+import Signup from './screens/Signup';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -19,6 +15,13 @@ import Planpage from './navigation/planpage';
 import Profile1 from './navigation/profile';
 import Payment from './navigation/payment';
 import setting from './navigation/setting';
+import Booking from './navigation/booking';
+import explore from './screens/explore';
+import start from './screens/start';
+import payment from './navigation/payment';
+import Bookingmember from './navigation/BookingMember';
+import sheet from './navigation/sheets';
+
 
 
 
@@ -28,10 +31,11 @@ const Stack= createNativeStackNavigator();
 const BottomTab=createBottomTabNavigator();
 const Drawer=createDrawerNavigator();
 
+
 function Drawer1(){
   return(
-    <Drawer.Navigator>
-    <Drawer.Screen name="profile" component={Profile} />
+    <Drawer.Navigator  >
+    <Drawer.Screen name="profile" component={Profile} options={{ headerShown: false }}/>
       <Drawer.Screen name="setting" component={setting} />
       <Drawer.Screen name="Payment" component={Payment} />
     </Drawer.Navigator>
@@ -73,30 +77,59 @@ function Profile(){
 function Tab(){
   return(
     <BottomTab.Navigator initialRouteName="FEED"
-      screenOptions={{
-        tabBarActiveTintColor: 'rgba(0, 68, 167, 1)',
-         tabBarStyle: {
-      height: 80,
-      paddingHorizontal: 5,
-      paddingTop: 0,
-      backgroundColor: 'rgba(40, 38, 53, 1)',
-      position: 'absolute',
-      borderTopWidth: 0,
-      borderTopLeftRadius:50,
-      
-      borderTopRightRadius:50,
-      
-      
-      
-      
-  },headerTitleAlign:'center', headerStyle: {
-          backgroundColor: 'rgba(40, 38, 53, 1)',
+    
+       
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
+
+          if (route.name === 'Home') {
+            iconName = focused ? 'home' : 'home-outline';
+          } else if (route.name === 'Map') {
+            iconName = focused ? 'map' : 'map-outline';
+          } else if (route.name === 'Profile') {
+            iconName = focused ? 'account' : 'account-outline';
+          } else if (route.name === 'Planner') {
+            iconName = focused ? 'calendar' : 'calendar-outline';
+          }
+
+          return (
+            <MaterialCommunityIcons name={iconName} size={size} color={color} />
+          );
         },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
+        tabBarLabelStyle: {
+          fontSize: 16,
+          marginBottom: 6,
+          
         },
-      }}>
+        tabBarActiveTintColor: '#0044A7',
+        tabBarInactiveTintColor: '#FFFFFF',
+        
+        tabBarStyle: {
+          backgroundColor: '#282635',
+          height: 80,
+          
+         
+          
+        },
+        headerStyle: {
+          backgroundColor: '#282635', // Customize the header background color
+          height: 120, // Customize the header height
+        },
+        headerTintColor: '#fff', // Customize the text color of the header
+        headerTitleAlign: 'center',
+        headerRight: () => (
+          <MaterialCommunityIcons
+            name="bell"
+            size={23}
+            color="#fff"
+            style={{ marginRight: 30 }}
+          />
+        ),
+      
+       
+       
+      })}>
       <BottomTab.Screen name='Home' component={Home}
         
         options={{
@@ -142,42 +175,41 @@ function Tab(){
 export default function App() {
   return (
    <NavigationContainer >
-    <Stack.Navigator screenOptions={{headerShown:false}} >
+
+    <Stack.Navigator  >
+
+     <Stack.Screen 
+
+      name="start"
+      component={start}
+      options={{title:"welcome", headerShown: false }}
+
+    />
+
     <Stack.Screen
 
       name="home"
       component={home}
       options={{title:"welcome"}}
+     
 
     />
 
-    <Stack.Screen
+    
 
-      name="secondScreen"
-      component={secondScreen}
-      options={{title:"second screen"}}
-
-    />
-
-    <Stack.Screen
-
-      name="third"
-      component={third}
-      options={{title:"third screen"}}
-
-    />
+    
    <Stack.Screen
 
       name="signin"
-      component={signin}
-      options={{title:"Sign In"}}
+      component={Signin}
+      options={{title:"Sign In", headerShown: false }}
 
     />
     <Stack.Screen
 
       name="signup"
-      component={signup}
-      options={{title:"Sign Up"}}
+      component={Signup}
+      options={{title:"Sign Up", headerShown: false }}
 
     />
     
@@ -185,13 +217,106 @@ export default function App() {
 
       name="Tab"
       component={Tab}
-      options={{title:"app2"}}
+      options={{title:"app2", headerShown: false }}
 
     />
+
+    <Stack.Screen
+
+      name="explore"
+      component={explore}
+      options={{title:"app2", headerShown: false }}
+
+    />
+    <Stack.Screen initialRouteName="FEED"
+    
+       
+      
+
+      name="Booking"
+      component={Booking}
+      options={{title:"Booking",headerTintColor:"#fff",headerTitleAlign:'center', headerRight: () => (
+          <MaterialCommunityIcons
+            name="bell"
+            size={23}
+            color="#fff"
+            style={{ marginRight: 30 }}
+          />
+        ),headerStyle: {
+              backgroundColor: '#282635',
+              
+      },headerTitleStyle:{color:"#fff"}}}
+      
+      
+
+    />
+     <Stack.Screen
+
+
+    
+      name="payment"
+      component={payment}
+      options={{title:"Payment",headerTintColor:"#fff",headerTitleAlign:'center', headerRight: () => (
+          <MaterialCommunityIcons
+            name="bell"
+            size={23}
+            color="#fff"
+            style={{ marginRight: 30 }}
+          />
+        ),headerStyle: {
+              backgroundColor: '#282635',
+              
+      },headerTitleStyle:{color:"#fff"}}}
+      
+
+    />
+     <Stack.Screen
+
+
+    
+      name="Bookingmember"
+      component={Bookingmember}
+      options={{title:"Booking",headerTintColor:"#fff",headerTitleAlign:'center', headerRight: () => (
+          <MaterialCommunityIcons
+            name="bell"
+            size={23}
+            color="#fff"
+            style={{ marginRight: 30 }}
+          />
+        ),headerStyle: {
+              backgroundColor: '#282635',
+              
+      },headerTitleStyle:{color:"#fff"}}}
+      
+
+    />
+    
+    <Stack.Screen
+
+
+    
+      name="sheets"
+      component={sheet}
+      options={{title:"Booking",headerTintColor:"#fff",headerTitleAlign:'center', headerRight: () => (
+          <MaterialCommunityIcons
+            name="bell"
+            size={23}
+            color="#fff"
+            style={{ marginRight: 30 }}
+          />
+        ),headerStyle: {
+              backgroundColor: '#282635',
+              
+      },headerTitleStyle:{color:"#fff"}}}
+      
+
+    />
+    
 
     
     
     </Stack.Navigator>
+
     
       
    </NavigationContainer>

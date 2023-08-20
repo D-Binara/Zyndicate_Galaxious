@@ -5,11 +5,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 export default function home({navigation}) {
   
+  
   return (
     <View style={styles.box1}>
 
     
-     <Image source={require('./space-universe-with-planets_896675-92.jpg')}></Image>
+     <Image source={require('./images/space-universe-with-planets_896675-92.jpg')}></Image>
 
 
      <View style={styles.container1}>

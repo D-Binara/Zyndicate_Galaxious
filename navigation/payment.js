@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
 
     container:{
         backgroundColor:'#020011',
-        height:800,
+        height:900,
         color:'#fff'
     },
     backbtn:{
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     },
      box13:{
         
-        marginTop:-30,
+        marginTop:80,
         width:330,
         height:89,
         marginLeft:40,
