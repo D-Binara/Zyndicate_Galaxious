@@ -95,13 +95,13 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     Sentense: {
-        paddingBottom: 430,
+        paddingBottom: 10,
         paddingLeft: 50,
         fontFamily: 'Roboto',
         color: 'white',
     },
     buttonbooknow: {
-        paddingTop: 75,
+        paddingTop: 275,
         paddingLeft: 65,
         color: '#2196F3',
         alignItems: 'center',
@@ -118,16 +118,17 @@ const styles = StyleSheet.create({
         paddingRight: 60,
     },
     description2: {
+        paddingTop:35,
         fontFamily: 'Roboto',
         color: 'white',
         textAlign: 'justify',
-        fontSize: 13,
+        fontSize: 15,
         paddingRight: 25,
         paddingLeft: 50,
     },
     Findmore:{
-        paddingBottom: 430,
-        paddingLeft: 50,
+        paddingTop:590,
+        paddingLeft: 135,
         fontFamily: 'Roboto',
         color: 'white',
         alignItems: 'center',
