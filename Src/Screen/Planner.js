@@ -6,7 +6,7 @@ const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 
-const Plane2 = ({ navigation }) => {
+const Planner = ({ navigation }) => {
     return (
         <SafeAreaView style={{ flex: 1 }} >
             <ScrollView>
@@ -144,4 +144,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default Plane2;
+export default Planner;
