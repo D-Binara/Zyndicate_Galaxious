@@ -1,6 +1,6 @@
 import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useReducer, useState } from 'react'
-import * as ImagePicker from 'expo-image-picker';
+//import * as ImagePicker from 'expo-image-picker';
 import BookingButton from './BookingButton';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { TouchableOpacity } from 'react-native';
